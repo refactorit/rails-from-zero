@@ -1,12 +1,13 @@
 # config/application.rb
 require File.expand_path('../boot', __FILE__)
 
-require 'rails'
-require 'action_controller'
+require 'rails/all'
 
 Bundler.require(:default)
 
-Class.new(Rails::Application){
+module RailsFromZero
+  class Application < Rails::Application
 
-}
+  end
+end
 
