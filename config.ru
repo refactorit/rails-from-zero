@@ -1,13 +1,5 @@
 # config.ru
-require 'rails'
-require 'action_controller'
+require File.expand_path('../config/environment', __FILE__)
 
-app = Class.new(Rails::Application){
-  config.secret_key_base='0837359d48a53883'
-  routes.append{ root to:proc{
-    [200, {'Content-Type'=>'text/html'}, ['Hello World!']]
-  }}
-}.initialize!
-
-run app
+run Rails.application
 
